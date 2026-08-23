@@ -2,6 +2,8 @@
 
 Write-ups of hands-on exercises. Every entry here reflects something I actually did, not something I read about — that's the line between this folder and `study-notes/`.
 
+**Live activity:** my [TryHackMe profile](https://tryhackme.com/p/winmyataun0007) is the real-time record of rooms completed, badges earned, and learning paths in progress. This folder is the curated, written-up subset — deeper write-ups for the rooms and challenges worth documenting in full, not a 1:1 mirror of every completed room.
+
 ## Log format
 
 Add one row per completed lab and link to its write-up file (`YYYY-MM-DD-short-title.md`):

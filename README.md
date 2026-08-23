@@ -1,5 +1,8 @@
 # Zane — SOC Analyst Portfolio & CySA+ Study Log
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/win-myat-aung-46630a35b/)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-Profile-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/winmyataun0007)
+
 Cybersecurity portfolio and public study log documenting my path into a Security Operations Center (SOC) analyst role. This repository is a working record — it grows as I study, practice, and build.
 
 **Target roles:** SOC Analyst (Tier 1/2) · Blue Team · Security Operations · Security Monitoring · Junior Incident Response · IT Help Desk (security-track)
@@ -77,6 +80,9 @@ Every investigation I run gets written up using the reusable template in [`incid
 
 I'm building toward a junior SOC analyst / blue team role. This repository is proof of consistent, honest effort — not a highlight reel. Entries are only added once the work is actually done, and unfinished sections say so rather than being padded out.
 
-## Contact
+## Connect
+
+- **LinkedIn:** [linkedin.com/in/win-myat-aung-46630a35b](https://www.linkedin.com/in/win-myat-aung-46630a35b/)
+- **TryHackMe:** [tryhackme.com/p/winmyataun0007](https://tryhackme.com/p/winmyataun0007) — live record of rooms completed, badges, and learning paths in progress; the curated write-ups in [`practice-labs/`](./practice-labs) pull from this activity
 
 Feel free to open an issue or reach out if you'd like to discuss any of the write-ups here.

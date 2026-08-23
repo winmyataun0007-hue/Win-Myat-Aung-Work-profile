@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs / captures — don't commit real or large raw data
+*.pcap
+*.pcapng
+*.log
+*.evtx
+
+# Python (if you add automation scripts)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (if you add any tooling)
+node_modules/
+
+# Secrets — never commit these
+.env
+*.pem
+*.key
+credentials*

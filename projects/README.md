@@ -6,7 +6,7 @@ Unlike `practice-labs/` (guided exercises on other platforms), this folder is fo
 
 | Project | Description | Stack/Tools | Status | Link |
 |---|---|---|---|---|
-| _example_ | _e.g. "Home SOC lab ingesting simulated attacks into a SIEM"_ | Security Onion, Zeek, Suricata | 🟡 In progress | _folder or repo link_ |
+| **TriageDesk** | SOC alert triage & incident management platform: ingests Wazuh/Suricata alerts, enriches, risk-scores and correlates them into incidents, tracks SLAs (MTTA/MTTR) and maps to MITRE ATT&CK with playbooks. University capstone. | Python, FastAPI, SQLite, pytest | ✅ Shipped | [Repo](https://github.com/winmyataun0007-hue/Triagedesk) · [Live demo](https://winmyataun0007-hue.github.io/Triagedesk/demo/) |
 
 ## Planned projects
 

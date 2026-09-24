@@ -46,6 +46,21 @@ Fourth-year Information Technology student at **Siam University**, Bangkok, work
 
 ---
 
+## Featured project: TriageDesk
+
+**SOC alert triage and incident management platform**, built as my university capstone. It ingests Wazuh and Suricata alerts, enriches them with threat-intel and asset context, scores risk, correlates related alerts into incidents, and tracks SLAs (MTTA / MTTR) with MITRE ATT&CK mapping and response playbooks.
+
+<p>
+  <a href="https://winmyataun0007-hue.github.io/Triagedesk/demo/"><img alt="Try the live demo" src="https://img.shields.io/badge/%E2%96%B6_Try_the_live_demo-3FB950?style=for-the-badge&logoColor=white"></a>
+  <a href="https://github.com/winmyataun0007-hue/Triagedesk"><img alt="Source code" src="https://img.shields.io/badge/Source_code-Triagedesk-181717?style=for-the-badge&logo=github&logoColor=white"></a>
+</p>
+
+<a href="https://winmyataun0007-hue.github.io/Triagedesk/demo/"><img alt="TriageDesk SOC console" src="docs/assets/triagedesk-preview.jpg" width="720"></a>
+
+The demo runs the real Python backend inside your browser through WebAssembly, so there's nothing to install. Open an incident, acknowledge it, resolve it with a verdict, or simulate a new burst of alerts. Python · FastAPI · SQLite · 24 automated tests.
+
+---
+
 ## Repository map
 
 | Folder | What's in it |
@@ -234,6 +249,7 @@ Nothing is listed as shipped until it exists. Planned items are marked planned �
 
 | Project | Status | What it demonstrates |
 |---|:--:|---|
+| [TriageDesk](https://github.com/winmyataun0007-hue/Triagedesk) · [live demo](https://winmyataun0007-hue.github.io/Triagedesk/demo/) | ✅ Shipped | SOC alert triage platform: multi-source ingestion, enrichment, risk scoring, correlation, SLA tracking, ATT&CK playbooks |
 | CySA+ CS0-004 study guides | 🟡 In progress | Written domain material produced while studying, not collected afterwards |
 | Home SOC lab | ⚪ Planned | Security Onion / ELK ingesting logs with simulated attack traffic — detection end to end |
 | Detection rule pack | ⚪ Planned | Sigma / Wazuh rules against real log samples, with reasoning and evasion notes |

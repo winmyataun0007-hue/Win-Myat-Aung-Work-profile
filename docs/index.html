@@ -97,8 +97,15 @@ section{padding:72px 0; position:relative}
 .hero-bg{position:absolute; inset:0; pointer-events:none}
 .hero-bg .grid{position:absolute; inset:-2px; background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px); background-size:46px 46px; mask-image:radial-gradient(ellipse 90% 62% at 50% 0%,#000 30%,transparent 78%); -webkit-mask-image:radial-gradient(ellipse 90% 62% at 50% 0%,#000 30%,transparent 78%)}
 .hero-bg .glow{position:absolute; width:760px; height:520px; left:50%; top:-260px; transform:translateX(-50%); background:radial-gradient(ellipse at center, rgba(240,180,41,.10), transparent 62%)}
-.hero-inner{position:relative; max-width:var(--maxw); margin:0 auto; padding:76px 24px 68px; display:grid; grid-template-columns:1.3fr .9fr; gap:48px; align-items:center}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr; gap:32px; padding:52px 24px 48px}}
+.hero-inner{position:relative; max-width:var(--maxw); margin:0 auto; padding:64px 24px 64px; display:grid; grid-template-columns:1.3fr .9fr; grid-template-areas:"text photo" "text term"; gap:26px 48px; align-items:center}
+.hero-inner > .hero{grid-area:text}
+.hero-inner > .term{grid-area:term; align-self:start}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr; grid-template-areas:"photo" "text" "term"; gap:28px; padding:44px 24px 48px}}
+
+/* profile photo */
+.avatar{grid-area:photo; justify-self:center; align-self:end; position:relative; width:216px; aspect-ratio:1; margin:0; padding:4px; border-radius:50%; background:linear-gradient(145deg,var(--accent),color-mix(in srgb,var(--accent) 22%,transparent) 48%,var(--border-2)); box-shadow:0 22px 48px -20px rgba(0,0,0,.75), 0 0 70px -18px rgba(240,180,41,.35)}
+.avatar img{display:block; width:100%; height:100%; object-fit:cover; border-radius:50%; border:4px solid var(--bg); background:var(--bg-2)}
+@media(max-width:900px){.avatar{justify-self:start; width:156px}}
 .pill{display:inline-flex; align-items:center; gap:9px; padding:6px 13px 6px 10px; border:1px solid var(--border-2); border-radius:999px; background:var(--surface); font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-2); margin-bottom:20px}
 .dot{width:7px; height:7px; border-radius:50%; background:var(--ok); position:relative; flex:0 0 7px}
 .dot::after{content:""; position:absolute; inset:-4px; border-radius:50%; border:1px solid var(--ok); opacity:.5; animation:ping 2.4s cubic-bezier(0,0,.2,1) infinite}
@@ -210,6 +217,9 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
 <section id="hero">
   <div class="hero-bg"><div class="grid"></div><div class="glow"></div></div>
   <div class="hero-inner">
+    <figure class="avatar">
+      <img src="assets/zane-headshot.jpg" alt="Win Myat Aung (Zane)" width="600" height="600" fetchpriority="high" decoding="async">
+    </figure>
     <div class="hero">
       <span class="pill"><span class="dot"></span> Open to SOC internships · Bangkok</span>
       <h1>Win Myat Aung <span class="thin">— Zane</span></h1>

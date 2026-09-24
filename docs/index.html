@@ -182,6 +182,39 @@ section{padding:72px 0; position:relative}
 .skills{display:grid; gap:16px}
 .skills .lbl{font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-3); margin-bottom:8px}
 
+/* cysa+ progress */
+.prog{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow)}
+.prog-head{display:flex; justify-content:space-between; align-items:baseline; gap:6px 16px; flex-wrap:wrap; margin-bottom:12px}
+.prog-head h3{font-size:18px}
+.prog-meta{font-family:var(--mono); font-size:12px; color:var(--text-3)}
+.pbar{height:6px; background:var(--surface-2); border-radius:999px; overflow:hidden; margin-bottom:22px}
+.pbar i{display:block; height:100%; width:70%; border-radius:999px; background:linear-gradient(90deg,var(--ok) 0 85%,var(--accent))}
+.steps{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; list-style:none; margin:0; padding:0}
+.step{padding-top:12px; border-top:2px solid var(--border-2)}
+.step.done{border-top-color:var(--ok)}
+.step.now{border-top-color:var(--accent)}
+.step .st{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-3)}
+.step.done .st{color:var(--ok)} .step.now .st{color:var(--accent)}
+.step h4{font-family:var(--display); font-size:14.5px; line-height:1.3; margin:4px 0 3px}
+.step p{font-size:13px; line-height:1.5; color:var(--text-2); margin:0}
+.doms{display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; padding-top:18px; border-top:1px solid var(--border)}
+.doms .chip b{color:var(--text-3); font-weight:500; margin-left:6px}
+@media(max-width:760px){
+  .prog{padding:20px}
+  .steps{grid-template-columns:1fr; gap:0}
+  .step{border-top:0; border-left:2px solid var(--border-2); padding:0 0 14px 14px}
+  .step:last-child{padding-bottom:0}
+  .step.done{border-left-color:var(--ok)} .step.now{border-left-color:var(--accent)}
+}
+
+/* it support */
+.ready{margin-top:30px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:16px; align-items:start; padding:20px 22px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--ok); border-radius:var(--radius)}
+.ready .ic{width:38px; height:38px; border-radius:10px; display:grid; place-items:center; background:color-mix(in srgb,var(--ok) 12%,transparent); color:var(--ok)}
+.ready .ic svg{width:19px; height:19px}
+.ready h3{font-size:16.5px; margin-bottom:4px}
+.ready p{color:var(--text-2); font-size:14.5px; margin:0 0 10px; max-width:70ch}
+@media(max-width:560px){.ready{grid-template-columns:1fr; gap:10px}}
+
 /* footer */
 footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(--bg-2)}
 .foot{display:grid; grid-template-columns:1.2fr 1fr; gap:28px; align-items:center}
@@ -203,6 +236,7 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
     <a class="brand" href="#hero"><span class="brand-mark">WMA</span> Win&nbsp;Myat&nbsp;Aung <span style="color:var(--text-3);font-weight:500">/ Zane</span></a>
     <nav class="nav-links" id="navLinks" aria-label="Sections">
       <a href="#certs">Certifications</a>
+      <a href="#cysa">CySA+</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
@@ -221,7 +255,7 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
       <img src="assets/zane-headshot.jpg" alt="Win Myat Aung (Zane)" width="600" height="600" fetchpriority="high" decoding="async">
     </figure>
     <div class="hero">
-      <span class="pill"><span class="dot"></span> Open to SOC internships · Bangkok</span>
+      <span class="pill"><span class="dot"></span> Open to SOC &amp; IT support internships · Bangkok</span>
       <h1>Win Myat Aung <span class="thin">— Zane</span></h1>
       <div class="role">Aspiring SOC Analyst · Blue Team</div>
       <p class="lead">Final-year IT student at Siam University, training for a <strong>Tier 1 SOC analyst</strong> role. I work hands-on with <strong>Wazuh</strong> and <strong>ManageEngine Log360 / AD360</strong>, have completed <strong>TryHackMe SOC Level 1</strong>, and am in the final stretch of <strong>CompTIA CySA+</strong>.</p>
@@ -296,8 +330,39 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
         <div class="tags"><span class="chip gold">In progress</span></div>
         <h3>CompTIA CySA+ (CS0-004)</h3>
         <span class="by">CompTIA</span>
-        <p>All four exam domains studied. Final stretch of prep, sitting the exam soon.</p>
+        <p>All four exam domains studied. Final stretch of prep, sitting the exam soon. <a href="#cysa">See my progress ↓</a></p>
       </article>
+    </div>
+  </div>
+</section>
+<hr class="rule">
+
+<!-- CYSA+ PROGRESS -->
+<section id="cysa">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">02 — CySA+ progress</div>
+      <h2 class="sec-title">Where my CySA+ prep stands</h2>
+    </div>
+    <div class="prog reveal">
+      <div class="prog-head">
+        <h3>CompTIA CySA+ (CS0-004)</h3>
+        <span class="prog-meta">Stage 4 of 5 · updated Sep 2026</span>
+      </div>
+      <div class="pbar" role="img" aria-label="Stage 4 of 5"><i></i></div>
+      <ol class="steps">
+        <li class="step done"><span class="st">✓ Done</span><h4>All 4 domains studied</h4><p>Every exam objective, domain by domain.</p></li>
+        <li class="step done"><span class="st">✓ Done</span><h4>Own study library</h4><p>A guide for each section, plus a full-length practice exam.</p></li>
+        <li class="step done"><span class="st">✓ Done</span><h4>Baseline exam</h4><p>Timed, full-length run to find weak spots.</p></li>
+        <li class="step now"><span class="st">● Now</span><h4>Targeted review</h4><p>Daily plan, weakest and highest-value topics first.</p></li>
+        <li class="step"><span class="st">Next</span><h4>Sit the exam</h4><p>Book it once practice scores clear the bar.</p></li>
+      </ol>
+      <div class="doms" aria-label="Exam domains studied">
+        <span class="chip green">✓ Security Operations<b>34%</b></span>
+        <span class="chip green">✓ Vulnerability Management<b>26%</b></span>
+        <span class="chip green">✓ Incident Response<b>24%</b></span>
+        <span class="chip green">✓ Reporting &amp; Communication<b>16%</b></span>
+      </div>
     </div>
   </div>
 </section>
@@ -307,7 +372,7 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
 <section id="projects">
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">02 — Projects</div>
+      <div class="eyebrow">03 — Projects</div>
       <h2 class="sec-title">What I've built</h2>
     </div>
     <div class="cards proj">
@@ -364,7 +429,7 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
 <section id="experience">
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">03 — Experience &amp; skills</div>
+      <div class="eyebrow">04 — Experience &amp; skills</div>
       <h2 class="sec-title">Background</h2>
     </div>
     <div class="two">
@@ -397,6 +462,14 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
         </div>
       </div>
     </div>
+    <div class="ready reveal">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2" y="14" width="5" height="6" rx="1.5"/><rect x="17" y="14" width="5" height="6" rx="1.5"/></svg></span>
+      <div>
+        <h3>Ready for IT support roles too</h3>
+        <p>Five months on a help desk gave me the day-to-day skills that keep users working: logging and escalating tickets, resetting passwords and account access, managing Active Directory users, and explaining fixes in plain language.</p>
+        <div class="tags"><span class="chip">Ticketing &amp; escalation</span><span class="chip">Password &amp; access resets</span><span class="chip">Active Directory</span><span class="chip">End-user support</span><span class="chip">Documentation</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -405,9 +478,9 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
   <div class="wrap">
     <div class="foot reveal">
       <div>
-        <div class="eyebrow">04 — Contact</div>
+        <div class="eyebrow">05 — Contact</div>
         <h2>Looking for a SOC internship</h2>
-        <p>Open to SOC and blue-team internships in Bangkok or remote. Siam University arranges the formal internship agreement (MOU) with the host company.</p>
+        <p>Open to SOC, blue-team and IT support internships in Bangkok or remote. Siam University arranges the formal internship agreement (MOU) with the host company.</p>
       </div>
       <div class="btn-row">
         <a class="btn primary" href="https://www.linkedin.com/in/win-myat-aung-46630a35b/" target="_blank" rel="noopener">LinkedIn</a>

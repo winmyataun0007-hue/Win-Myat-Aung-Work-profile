@@ -140,6 +140,28 @@ section{padding:72px 0; position:relative}
 .chip.green{background:color-mix(in srgb,var(--ok) 12%,transparent); border-color:color-mix(in srgb,var(--ok) 35%,transparent); color:var(--ok)}
 .fine{color:var(--text-3); font-size:13.5px; margin:16px 0 0}
 
+/* featured project */
+.cards.proj{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:760px){.cards.proj{grid-template-columns:1fr}}
+.card.proj-hero{grid-column:1/-1; display:grid; grid-template-columns:1fr 1.08fr; gap:26px; align-items:center; padding:24px}
+@media(max-width:860px){.card.proj-hero{grid-template-columns:1fr; gap:18px; padding:20px}}
+.ph-text{display:flex; flex-direction:column; gap:8px; min-width:0}
+.card.proj-hero h3{font-size:22px}
+.card.proj-hero p{flex:none}
+.ph-try{list-style:none; margin:2px 0 4px; padding:0; display:grid; gap:4px}
+.ph-try li{position:relative; padding-left:18px; color:var(--text-2); font-size:14px}
+.ph-try li::before{content:"›"; position:absolute; left:3px; top:-1px; color:var(--accent); font-weight:700}
+.ph-actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+.btn.sm{padding:8px 13px; font-size:13.5px}
+.ph-note{font-family:var(--mono); font-size:11.5px; color:var(--text-3)}
+.ph-shot{position:relative; display:block; border-radius:10px; overflow:hidden; border:1px solid var(--border-2); background:var(--bg-2); aspect-ratio:1200/570; box-shadow:var(--shadow)}
+.ph-shot img{width:100%; height:100%; object-fit:cover; object-position:top left; display:block; transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+.ph-shot:hover img{transform:scale(1.035)}
+.ph-shot .play{position:absolute; left:12px; bottom:12px; display:inline-flex; align-items:center; gap:8px; padding:7px 12px; border-radius:999px; background:rgba(10,16,28,.86); border:1px solid rgba(240,180,41,.55); color:#F0B429; font-family:var(--mono); font-size:12px; font-weight:600; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px)}
+.ph-shot:hover{text-decoration:none}
+.chip .dot{width:6px; height:6px; flex:0 0 6px; margin-right:6px}
+.term-body a.a:hover{text-decoration:underline}
+
 /* experience + skills */
 .two{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start}
 @media(max-width:860px){.two{grid-template-columns:1fr}}
@@ -198,6 +220,10 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.5c0-1.31-.02-3-1.9-3-1.9 0-2.2 1.42-2.2 2.9V21H9z"/></svg>
           LinkedIn
         </a>
+        <a class="btn" href="https://winmyataun0007-hue.github.io/Triagedesk/demo/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+          Live project demo
+        </a>
         <a class="btn" href="mailto:winmyataun0007@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
           Email
@@ -216,6 +242,7 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
         <div class="row"><span class="k">certified</span><span class="g">SOC L1 · Log360 · AD360</span></div>
         <div class="row"><span class="k">in_progress</span><span class="a">CySA+ CS0-004</span></div>
         <div class="row"><span class="k">siem</span><span class="v">Wazuh · Log360</span></div>
+        <div class="row"><span class="k">live_demo</span><a class="a" href="https://winmyataun0007-hue.github.io/Triagedesk/demo/" target="_blank" rel="noopener">TriageDesk ↗</a></div>
         <div class="row"><span class="k">education</span><span class="v">BSc IT · Siam Univ. · 2027</span></div>
         <div class="row"><span class="k">languages</span><span class="v">English · Burmese · Thai</span></div>
       </div>
@@ -273,13 +300,35 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
       <div class="eyebrow">02 — Projects</div>
       <h2 class="sec-title">What I've built</h2>
     </div>
-    <div class="cards">
-      <article class="card reveal">
-        <div class="tags"><span class="chip gold">University capstone</span></div>
-        <h3>TriageDesk</h3>
-        <span class="by">SOC alert triage &amp; incident management app</span>
-        <p>Ingests Wazuh and Suricata alerts, enriches them with threat-intel and asset context, scores risk, groups related alerts into incidents, and tracks SLAs (MTTA / MTTR) with MITRE ATT&amp;CK mapping and playbooks.</p>
-        <div class="tags"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">ATT&amp;CK</span></div>
+    <div class="cards proj">
+      <article class="card feature proj-hero reveal">
+        <div class="ph-text">
+          <div class="tags"><span class="chip gold">University capstone</span><span class="chip green"><span class="dot"></span>Live demo</span></div>
+          <h3>TriageDesk</h3>
+          <span class="by">SOC alert triage &amp; incident management app</span>
+          <p>Ingests Wazuh and Suricata alerts, enriches them with threat-intel and asset context, scores risk, groups related alerts into incidents, and tracks SLAs (MTTA / MTTR) with MITRE ATT&amp;CK mapping and playbooks.</p>
+          <ul class="ph-try" aria-label="What you can do in the demo">
+            <li>Open the highest-risk incident and read its enrichment and ATT&amp;CK playbook</li>
+            <li>Acknowledge, assign and resolve it with a verdict, and watch the SLA timer and audit trail update</li>
+            <li>Simulate a burst of new alerts and watch them get scored and correlated live</li>
+          </ul>
+          <div class="tags"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">ATT&amp;CK</span><span class="chip">24 tests</span></div>
+          <div class="ph-actions">
+            <a class="btn primary sm" href="https://winmyataun0007-hue.github.io/Triagedesk/demo/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+              Try the live demo
+            </a>
+            <a class="btn sm" href="https://github.com/winmyataun0007-hue/Triagedesk" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+              Source code
+            </a>
+          </div>
+          <span class="ph-note">The real Python backend runs in your browser. Nothing to install, and the first load takes about 5–10 s.</span>
+        </div>
+        <a class="ph-shot" href="https://winmyataun0007-hue.github.io/Triagedesk/demo/" target="_blank" rel="noopener" aria-label="Open the TriageDesk live demo">
+          <img src="assets/triagedesk-preview.jpg" width="1200" height="570" loading="lazy" alt="TriageDesk SOC console: risk-ranked incident queue with SLA timers, KPIs and severity mix">
+          <span class="play">▶ Open live demo</span>
+        </a>
       </article>
       <article class="card reveal">
         <div class="tags"><span class="chip">OT security</span></div>
@@ -296,7 +345,7 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
         <div class="tags"><span class="chip">Documentation</span><span class="chip">Wazuh</span><span class="chip">Log360</span></div>
       </article>
     </div>
-    <p class="fine reveal">Code and write-ups available on request.</p>
+    <p class="fine reveal">TriageDesk's source code and live demo are public. Other code and write-ups are available on request.</p>
   </div>
 </section>
 <hr class="rule">
@@ -320,7 +369,7 @@ footer{border-top:1px solid var(--border); padding:56px 0 60px; background:var(-
           <div class="when">2023 – 2027 (expected)</div>
           <h3>BSc Information Technology</h3>
           <div class="where">Siam University, Bangkok</div>
-          <p>Final year. Capstone: TriageDesk.</p>
+          <p>Final year. Capstone: <a href="https://winmyataun0007-hue.github.io/Triagedesk/demo/" target="_blank" rel="noopener">TriageDesk</a> (try the live demo).</p>
         </div>
       </div>
       <div class="skills reveal">
